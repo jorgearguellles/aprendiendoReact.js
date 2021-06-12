@@ -20,6 +20,8 @@ Esto también permite que React muestre mensajes de error o advertencia más út
 ## 1. En JSX puedes insertar expresiones de JavaScript
 
 Puedes poner cualquier expresión de JavaScript dentro de llaves en JSX  **{ Expresiones de JS }**.
+
+
 Ejemplo1:
 ```js
 const name = 'Jorge Arias Argüelles';
@@ -51,6 +53,8 @@ Después de compilarse, las expresiones JSX se convierten en llamadas a funcione
 - asignarlo a variables
 - aceptarlo como argumento
 - Retornarlo desde dentro de funciones
+
+
 Por ejemplo: 
 
 ```js
@@ -73,7 +77,9 @@ const element = <div tabIndex="0"></div>;
 const element = <img src={user.avatarUrl}></img>;
 ```
 
-**No pongas comillas rodeando llaves cuando insertes una expresión JavaScript en un atributo.** - Debes utilizar comillas para los valores de los strings
+**No pongas comillas rodeando llaves cuando insertes una expresión JavaScript en un atributo.**
+
+- Debes utilizar comillas para los valores de los strings
 - Y llaves para las expresiones de JavaScript
 
 ## 4. En JSX puedes especificar hijos
