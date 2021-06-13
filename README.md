@@ -16,6 +16,6 @@ Jorge Arias Argüelles en [GitHub](https://github.com/jorgearguellles) y en
  
  ## Retroalimentación
 
-Si tienes alguna idea que ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
+Si tienes recomendaciones para mejorar, por favor escribeme [@jorgeariasarg](https://www.linkedin.com/in/jorgeariasarguelles/)
 
   
