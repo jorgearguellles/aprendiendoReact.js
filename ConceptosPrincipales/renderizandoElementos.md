@@ -76,6 +76,8 @@ React DOM compara el elemento y sus hijos con el elemento anterior, y solo aplic
            </ul>
 </details>
 
+- - - -
+
 Para concluir repasemos los conceptosvistos en esta ocación:
 1. [X] Renderizado de elementos en el DOM
     1. [X] ¿Qué es un elemento de React.js?
