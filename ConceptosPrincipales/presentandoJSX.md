@@ -159,8 +159,8 @@ Para finalizar repasemos la lista de conceptos vistos:
     5. [x] JSX representa Objetos
 
 
-Y cuales veremos en las siguiente [ocación:](https://github.com/jorgearguellles/aprendiendoReact.js/blob/main/ConceptosPrincipales/renderizandoElementos.md)
-1. [ ] Renderizado de elementos en el DOM
-    1. [ ] ¿Qué es un elemento de React.js?
-    2. [ ] ¿Qué es un nodo raíz del DOM?
-2. [ ] Actualización del elemento renderizado
+Y cuales veremos en la siguiente [sesión:](https://github.com/jorgearguellles/aprendiendoReact.js/blob/main/ConceptosPrincipales/renderizandoElementos.md)
+1. Renderizado de elementos en el DOM
+    1. ¿Qué es un elemento de React.js?
+    2. ¿Qué es un nodo raíz del DOM?
+2. Actualización del elemento renderizado
