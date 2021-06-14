@@ -147,6 +147,7 @@ const element = {
 
 Estos objetos son llamados **Elementos de React**. Puedes pensar en ellos como descripciones de lo que quieres ver en pantalla. React lee estos objetos y los usa para construir el DOM y mantenerlo actualizado.
 
+- - - - 
 
 Para finalizar repasemos la lista de conceptos vistos:
 1. [x] ¿Qué es JSX?
