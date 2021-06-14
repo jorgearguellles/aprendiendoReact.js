@@ -1,7 +1,7 @@
 
 # Aprendiendo React.js
 
-Esta es la docunetación de mi proceso aprendiendo react.js 
+Esta es la documentación de mi proceso aprendiendo React.js 
 
 ## Autor
 
