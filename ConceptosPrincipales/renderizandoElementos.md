@@ -1,8 +1,8 @@
 En esta ocación veremos dos temas:
-1. [] Renderizado de elementos en el DOM
-  1. [] ¿Qué es un elemento de React.js?
-  2. [] ¿Qué es un nodo raíz del DOM?
-2. [] Actualización del elemento renderizado
+1. [ ] Renderizado de elementos en el DOM
+    1. [ ] ¿Qué es un elemento de React.js?
+    2. [ ] ¿Qué es un nodo raíz del DOM?
+2. [ ] Actualización del elemento renderizado
 
 # 1. Renderizado de elementos en el DOM
 
@@ -51,6 +51,6 @@ ReactDOM.render(element, document.getElementById('root'));
 
 Para concluir repasemos los conceptosvistos en esta ocación:
 1. [X] Renderizado de elementos en el DOM
-  1. [X] ¿Qué es un elemento de React.js?
-  2. [X] ¿Qué es un nodo raíz del DOM?
+    1. [X] ¿Qué es un elemento de React.js?
+    2. [X] ¿Qué es un nodo raíz del DOM?
 2. [X] Actualización del elemento renderizado
