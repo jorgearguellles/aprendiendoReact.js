@@ -160,7 +160,7 @@ Para finalizar repasemos la lista de conceptos vistos:
 
 
 Y cuales veremos en las siguiente ocación:
-1. [] Renderizado de elementos en el DOM
-    1. [] ¿Qué es un elemento de React.js?
-    2. [] ¿Qué es un nodo raíz del DOM?
-2. [] Actualización del elemento renderizado
+1. [ ] Renderizado de elementos en el DOM
+    1. [ ] ¿Qué es un elemento de React.js?
+    2. [ ] ¿Qué es un nodo raíz del DOM?
+2. [ ] Actualización del elemento renderizado

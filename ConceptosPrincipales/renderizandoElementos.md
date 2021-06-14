@@ -1,8 +1,8 @@
 En esta ocación veremos dos temas:
-1. [ ] Renderizado de elementos en el DOM
-    1. [ ] ¿Qué es un elemento de React.js?
-    2. [ ] ¿Qué es un nodo raíz del DOM?
-2. [ ] Actualización del elemento renderizado
+1. Renderizado de elementos en el DOM
+    1. ¿Qué es un elemento de React.js?
+    2. ¿Qué es un nodo raíz del DOM?
+2. Actualización del elemento renderizado
 
 # 1. Renderizado de elementos en el DOM
 
