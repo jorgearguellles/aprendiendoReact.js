@@ -68,10 +68,12 @@ React DOM compara el elemento y sus hijos con el elemento anterior, y solo aplic
 
 <details>
            <summary>Notas sobre ReactDom.render()</summary>
-           <p>ReactDOM.render() controla el contenido del nodo contenedor que suministras. Cualquiera de los elementos DOM dentro de este son reemplazados cuando se llama por primera vez. Las llamadas posteriores utilizan el algoritmo de diferenciado de React DOM para actualizaciones eficientes.</p>
-           <p>ReactDOM.render() no modifica el nodo contenedor (solo modifica los hijos del contenedor). Puede ser posible insertar un componente en un nodo existente del DOM sin sobrescribir los hijos existentes.</p>
-           <p>ReactDOM.render() actualmente retorna una referencia a la instancia ReactComponent raíz. Sin embargo, utilizar este valor retornado es una práctica vieja, y debe ser evitada debido a que en futuras versiones de React puede que los componentes se rendericen de manera asíncrona en algunos casos. Si deseas obtener una referencia a la instancia ReactComponent raíz, la solución preferida es agregar una referencia mediante callback al elemento raíz.</p>
-           <p>El uso de ReactDOM.render() para hidratar un contenedor renderizado por servidor esta despreciado, y será eliminado en la versión 17 de React. Usa en su lugar hydrate().</p>
+           <ul>
+           <li>ReactDOM.render() controla el contenido del nodo contenedor que suministras. Cualquiera de los elementos DOM dentro de este son reemplazados cuando se llama por primera vez. Las llamadas posteriores utilizan el algoritmo de diferenciado de React DOM para actualizaciones eficientes.</li>
+           <li>ReactDOM.render() no modifica el nodo contenedor (solo modifica los hijos del contenedor). Puede ser posible insertar un componente en un nodo existente del DOM sin sobrescribir los hijos existentes.</li>
+           <li>ReactDOM.render() actualmente retorna una referencia a la instancia ReactComponent raíz. Sin embargo, utilizar este valor retornado es una práctica vieja, y debe ser evitada debido a que en futuras versiones de React puede que los componentes se rendericen de manera asíncrona en algunos casos. Si deseas obtener una referencia a la instancia ReactComponent raíz, la solución preferida es agregar una referencia mediante callback al elemento raíz.</li>
+           <li>El uso de ReactDOM.render() para hidratar un contenedor renderizado por servidor esta despreciado, y será eliminado en la versión 17 de React. Usa en su lugar hydrate().</li>
+           </ul>
 </details>
 
 Para concluir repasemos los conceptosvistos en esta ocación:
