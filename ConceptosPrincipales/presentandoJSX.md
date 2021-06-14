@@ -2,11 +2,11 @@ En esta ocación veremos:
 1. ¿Qué es JSX?
 2. ¿Porqué usar JSX?
 3. ¿Cuáles son las principales características de JSX?
-  1. En JSX puedes insertar expresiones de JavaScript
-  2. JSX también es una expresión de JavaScript
-  3. En JSX puedes especificar atributos
-  4. En JSX puedes especificar hijos
-  5. JSX representa Objetos
+    1. En JSX puedes insertar expresiones de JavaScript
+    2. JSX también es una expresión de JavaScript
+    3. En JSX puedes especificar atributos
+    4. En JSX puedes especificar hijos
+    5. JSX representa Objetos
 
 
 # 1. ¿Qué es JSX?
@@ -152,15 +152,15 @@ Para finalizar repasemos la lista de conceptos vistos:
 1. [x] ¿Qué es JSX?
 2. [x] ¿Porqué usar JSX?
 3. [x] ¿Cuáles son las principales características de JSX?
-  1. [x] En JSX puedes insertar expresiones de JavaScript
-  2. [x] JSX también es una expresión de JavaScript
-  3. [x] En JSX puedes especificar atributos
-  4. [x] En JSX puedes especificar hijos
-  5. [x] JSX representa Objetos
+    1. [x] En JSX puedes insertar expresiones de JavaScript
+    2. [x] JSX también es una expresión de JavaScript
+    3. [x] En JSX puedes especificar atributos
+    4. [x] En JSX puedes especificar hijos
+    5. [x] JSX representa Objetos
 
 
 Y cuales veremos en las siguiente ocación:
 1. [] Renderizado de elementos en el DOM
-  1. [] ¿Qué es un elemento de React.js?
-  2. [] ¿Qué es un nodo raíz del DOM?
+    1. [] ¿Qué es un elemento de React.js?
+    2. [] ¿Qué es un nodo raíz del DOM?
 2. [] Actualización del elemento renderizado
