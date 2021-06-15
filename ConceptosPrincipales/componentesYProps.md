@@ -32,7 +32,7 @@ class Welcome extends React.Component {
 }
 ```
 
-# Renderizando un componente
+# 3. Renderizando un componente
 
 Un componente puede renderizar etiquetas del DOM. Por ejemplo:
 
