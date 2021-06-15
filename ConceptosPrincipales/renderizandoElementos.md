@@ -91,7 +91,7 @@ React DOM compara el elemento y sus hijos con el elemento anterior, y solo aplic
 
 - - - -
 
-Para concluir repasemos los conceptos vistos en esta ocación:
+# Temas vistos
 1. [X] Renderizado de elementos en el DOM
     1. [X] ¿Qué es un elemento de React.js?
     2. [X] ¿Qué es un nodo raíz del DOM?
