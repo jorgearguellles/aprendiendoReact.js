@@ -19,7 +19,7 @@ const element = <h1>Hello, world</h1>;
 ```
 ## 1.2. ¿Qué es un nodo raíz del DOM?
 
-Para responder esta pregunta recordemos que [DOM](https://medium.com/jspoint/understanding-basics-of-dom-265b73d958d1) es la abreviatura de *Document Object Model*. Es una representación estructurada en forma de árbol de elementos HTML. 
+Para responder esta pregunta recordemos que [DOM](https://medium.com/jspoint/understanding-basics-of-dom-265b73d958d1) es la abreviatura de *Document Object Model*. Es una representación estructurada en forma de árbol de elementos HTML y es parte del [*Critial Rendering Path*](https://dev.to/codesensei/critical-rendering-path-39m).
 
 Entonces un nodo raíz del DOM es una etiqueta contenedora (Qué abra y cierre) que este al interior de la etiqueta <body></body> del archivos HTML. Ese nodo lo llamaremos Nodo Raíz del DOM porque su id ="root" y porque todo lo que esté dentro de él será manejado por **React DOM**.
 Veamoslo en un archivo básico de HTML:
