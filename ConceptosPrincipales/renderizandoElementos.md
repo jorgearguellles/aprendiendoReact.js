@@ -1,12 +1,17 @@
-En esta ocación veremos dos temas:
-1. Renderizado de elementos en el DOM
-    1. ¿Qué es un elemento de React.js?
-    2. ¿Qué es un nodo raíz del DOM?
-2. Actualización del elemento renderizado
+# Indice de contenidos
+
+1. [Renderizado de elementos en el DOM](#dom)
+    1. [¿Qué es un elemento de React.js?](#elemento)
+    2. [¿Qué es un nodo raíz del DOM?](#nodoraiz)
+2. [Actualización del elemento renderizado](#actualizacion)
+
+<a name="dom"/>
 
 # 1. Renderizado de elementos en el DOM
 
 Para renderizar un **elemento de React** en un **nodo raíz del DOM**, pasa ambos al interior de **ReactDOM.render()**, para entender lo anterior, primero entendamos **¿Qué es un elemento de React.js?** y **¿Qué es un nodo raíz del DOM?**
+
+<a name="elemento"/>
 
 ## 1.1. ¿Qué es un elemento de React.js?
 
@@ -17,6 +22,8 @@ En las notas ateriores vimos que un **Elemento de react** describe lo que quiere
 ```js 
 const element = <h1>Hello, world</h1>;
 ```
+
+<a name="nodoraiz"/>
 
 ## 1.2. ¿Qué es un nodo raíz del DOM?
 
@@ -46,6 +53,8 @@ También es importante tener claro que **ReactDOM.render(par1, par2)** recibe do
 const element = <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
 ```
+
+<a name="actualizacion"/>
 
 # 2. Actualización del elemento renderizado
 
