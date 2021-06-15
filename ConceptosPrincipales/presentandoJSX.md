@@ -165,7 +165,7 @@ Estos objetos son llamados **Elementos de React**. Puedes pensar en ellos como d
 
 - - - - 
 
-Para finalizar repasemos la lista de conceptos vistos:
+# Temas vistos
 1. [x] ¿Qué es JSX?
 2. [x] ¿Porqué usar JSX?
 3. [x] ¿Cuáles son las principales características de JSX?
