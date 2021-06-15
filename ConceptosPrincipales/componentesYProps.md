@@ -66,15 +66,22 @@ ReactDOM.render(
 );
 ```
 
-<details>
-           <summary>Recapitulemos lo que sucede en este ejemplo:</summary>
-           <ol>
-           <li>Llamamos a ReactDOM.render() con el elemento <Welcome name="Jorge" />.</li>
-           <li>React llama al componente Welcome con {name: 'Sara'} como “props”.</li>
-           <li>Nuestro componente Welcome devuelve un elemento <h1>Hello, Jorge</h1> como resultado.</li>
-           <li>React DOM actualiza eficientemente el DOM para que coincida con <h1>Hello, Jorge</h1> </li>
-           </ol>
-</details>
+Recapitulemos lo que sucede en este ejemplo:
+- Llamamos a **ReactDOM.render()** con el elemento: 
+```js
+<Welcome name="Jorge" />
+```
+- React llama al componente Welcome con **{name: 'Jorge'} como “props”**.
+- Nuestro componente Welcome devuelve como resultado un elemento:
+```js
+<h1>Hello, Jorge</h1>
+```
+
+- React DOM actualiza eficientemente el DOM para que coincida con: 
+```js
+<h1>Hello, Jorge</h1>
+```
+           
 
 
 
