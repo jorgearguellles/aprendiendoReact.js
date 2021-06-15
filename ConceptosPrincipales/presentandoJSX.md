@@ -1,18 +1,21 @@
 En esta ocación veremos:
-1. ¿Qué es JSX?
-2. ¿Porqué usar JSX?
-3. ¿Cuáles son las principales características de JSX?
-    1. En JSX puedes insertar expresiones de JavaScript
-    2. JSX también es una expresión de JavaScript
-    3. En JSX puedes especificar atributos
-    4. En JSX puedes especificar hijos
-    5. JSX representa Objetos
+1. [¿Qué es JSX?](#jsx1)
+2. [¿Porqué usar JSX?](#jsx2)
+3. [Principales características de JSX](#jsx3)
+    1. [En JSX puedes insertar expresiones de JavaScript](#jsx3.1)
+    2. [JSX también es una expresión de JavaScript](#jsx3.2)
+    3. [En JSX puedes especificar atributos](#jsx3.3)
+    4. [En JSX puedes especificar hijos](#jsx3.4)
+    5. [JSX representa Objetos](#jsx3.5)
 
+<a name="jsx1"/>
 
-# 1. ¿Qué es JSX?
+# 1. ¿Qué es JSX? 
 
 Es una extensión de la sintaxis de JavaScript que visualmente es una mezcla entre una **String** y una **etiqueta HTML**, sin ser ninguna de las dos.
 Es recomendable usar JSX para indicar cómo debería ser la interfaz del usuario porque JSX produce **Elementos**
+
+<a name="jsx2"/>
 
 # 2. ¿Porqué usar JSX?
 
@@ -26,7 +29,11 @@ React.js trabaja la lógica y el maquetado de manera acoplada en unidades llamad
 Para programar en React.js no se requiere usar JSX, pero es muy útil como ayuda visual al momento de trabajar con interfaces de usuario dentro del código Javascript.
 Esto también permite que React muestre mensajes de error o advertencia más útiles.
 
-# 3. ¿Cuáles son las principales características de JSX?
+<a name="jsx3"/>
+
+# 3. Principales características de JSX
+
+<a name="jsx3.1"/>
 
 ## 3.1. En JSX puedes insertar expresiones de JavaScript
 
@@ -56,6 +63,8 @@ const element = (
 );
 ```
 
+<a name="jsx3.2"/>
+
 ## 3.2. JSX también es una expresión de JavaScript
 
 Después de compilarse, las expresiones JSX se convierten en llamadas a funciones JavaScript regulares y se evalúan en objetos JavaScript, es decir que también puedes usar JSX dentro de declaraciones:
@@ -77,6 +86,8 @@ function getGreeting(user) {
 }
 ```
 
+<a name="jsx3.3"/>
+
 ## 3.3. En JSX puedes especificar atributos
 
 - Puedes utilizar comillas para especificar strings literales como atributos:
@@ -92,6 +103,8 @@ const element = <img src={user.avatarUrl}></img>;
 
 - Debes utilizar comillas para los valores de los strings
 - Y llaves para las expresiones de JavaScript
+
+<a name="jsx3.4"/>
 
 ## 3.4. En JSX puedes especificar hijos
 Si una etiqueta está vacía, puedes cerrarla inmediatamente con />, como en XML.
@@ -110,6 +123,8 @@ const element = (
   </div>
 );
 ```
+
+<a name="jsx3.5"/>
 
 ## 3.5. JSX representa Objetos
 
