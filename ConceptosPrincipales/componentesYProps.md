@@ -34,31 +34,28 @@ class Welcome extends React.Component {
 
 # 3. Renderizando un componente
 
-Un componente puede renderizar etiquetas del DOM. Por ejemplo:
+Un componente puede renderizar **etiquetas del DOM** y **componentes definidos por el desarrollador**. 
+> Siempre comienza los nombres de componentes definidos con una letra mayúscula. React trata los componentes que empiezan con letras minúsculas como etiquetas del DOM.
+
+Por ejemplo:
 
 ```js
-const element = <div />;
+const element = <div />; //Representa una etiqueta div HTML
 ```
 
-y componentes definidos por el desarrollador. Por ejemplo:
-
 ```js
-const element = <Welcome name="Jorge" />;
+const element = <Welcome name="Jorge" />; //Representa un componente y requiere que Welcome esté definido.
 ```
 
-Cuando React ve un elemento representando un componente definido por el usuario, pasa atributos JSX e hijos a este componente como un solo objeto. Llamamos a este objeto “props”.
+Cuando React ve un elemento representando un componente definido por el usuario, pasa atributos JSX e hijos a este componente como un solo objeto. Llamamos a este objeto “props”. Por ejemplo:
 
-Siempre comienza los nombres de componentes definidos con una letra mayúscula.
-React trata los componentes que empiezan con letras minúsculas como etiquetas del DOM. Por ejemplo:
-- <div /> representa una etiqueta div HTML pero
-- <Welcome /> representa un componente y requiere que Welcome esté definido.
 
 ```js
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+function Welcome(props) { //Aquí defino el componente e indico que recibe props 
+  return <h1>Hello, {props.name}</h1>; //El props se llama name y más adelante le van a indicar
 }
 
-const element = <Welcome name="Jorge" />;
+const element = <Welcome name="Jorge" />; //Aquí llamo el componente y le indico el dato que pasra como props, lo guardo en una constante llamada elemento
 
 ReactDOM.render(
   element,
@@ -66,21 +63,7 @@ ReactDOM.render(
 );
 ```
 
-Recapitulemos lo que sucede en este ejemplo:
-- Llamamos a **ReactDOM.render()** con el elemento: 
-```js
-<Welcome name="Jorge" />
-```
-- React llama al componente Welcome con **{name: 'Jorge'} como “props”**.
-- Nuestro componente Welcome devuelve como resultado un elemento:
-```js
-<h1>Hello, Jorge</h1>
-```
 
-- React DOM actualiza eficientemente el DOM para que coincida con: 
-```js
-<h1>Hello, Jorge</h1>
-```
            
 
 
