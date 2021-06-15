@@ -63,9 +63,193 @@ ReactDOM.render(
 );
 ```
 
+# 4. Composición de componentes
 
-           
+Composición de componentes quiere decir que los componentes pueden referirse a otros componentes en su salida, esto nos permite tener la misma abstracción de componente para cualquier nivel de detalle.
+
+Por ejemplo, podemos crear un **componente App** que renderiza el **componente Welcome** muchas veces:
+
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Jorge" />
+      <Welcome name="Carolina" />
+      <Welcome name="Carlos" />
+    </div>
+  );
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+```
+
+# 5. Extracción de componentes
+
+Siempre es buena práctica dividir los componentes en otros más pequeños.
+
+Por ejemplo, considera este componente **Comment** que describe un comentario en una web de redes sociales y acepta las sigueintes props:
+- author (un objeto)
+- text (un string)
+- date (una fecha)
+
+```js
+function Comment(props) {
+  return (
+    <div className="Comment">
+      <div className="UserInfo">
+        <img className="Avatar"
+          src={props.author.avatarUrl}
+          alt={props.author.name}
+        />
+        <div className="UserInfo-name">
+          {props.author.name}
+        </div>
+      </div>
+      <div className="Comment-text">
+        {props.text}
+      </div>
+      <div className="Comment-date">
+        {formatDate(props.date)}
+      </div>
+    </div>
+  );
+}
+```
+
+Este componente puede ser difícil de cambiar debido a todo el anidamiento, y también es difícil reutilizar partes individuales de él. Vamos a extraer algunos componentes del mismo.
+
+Primero, vamos a extraer **Avatar** que no necesita saber que está siendo renderizado dentro de un **Comment** porque le dimos a su propiedad un nombre más genérico: user en vez de author.
+
+```js
+function Avatar(props) {
+  return (
+    <img className="Avatar"
+      src={props.user.avatarUrl}
+      alt={props.user.name}
+    />
+  );
+}
+```
+> Recomendamos nombrar las props desde el punto de vista del componente, en vez de la del contexto en el que se va a utilizar.
+
+El componenete Comment va quedando así:
+
+```js
+function Comment(props) {
+  return (
+    <div className="Comment">
+      <div className="UserInfo">
+        <Avatar user={props.author} />
+        <div className="UserInfo-name">
+          {props.author.name}
+        </div>
+      </div>
+      <div className="Comment-text">
+        {props.text}
+      </div>
+      <div className="Comment-date">
+        {formatDate(props.date)}
+      </div>
+    </div>
+  );
+}
 
 
 
+function Avatar(props) {
+  return (
+    <img className="Avatar"
+      src={props.user.avatarUrl}
+      alt={props.user.name}
+    />
+  );
+}
+```
 
+A continuación, vamos a extraer un **componente UserInfo** que renderiza un **Avatar** al lado del nombre del usuario:
+
+```js
+function UserInfo(props) {
+  return (
+    <div className="UserInfo">
+      <Avatar user={props.user} />
+      <div className="UserInfo-name">
+        {props.user.name}
+      </div>
+    </div>
+  );
+}
+```
+
+El componente Commet va quedando así:
+
+```js
+function Comment(props) {
+  return (
+    <div className="Comment">
+      <UserInfo user={props.author} />
+      <div className="Comment-text">
+        {props.text}
+      </div>
+      <div className="Comment-date">
+        {formatDate(props.date)}
+      </div>
+    </div>
+  );
+}
+
+
+function UserInfo(props) {
+  return (
+    <div className="UserInfo">
+      <Avatar user={props.user} />
+      <div className="UserInfo-name">
+        {props.user.name}
+      </div>
+    </div>
+  );
+}
+
+
+function Avatar(props) {
+  return (
+    <img className="Avatar"
+      src={props.user.avatarUrl}
+      alt={props.user.name}
+    />
+  );
+}
+```
+
+# 6. Las Props son de solo lectura
+
+> **Todos los componentes de React deben actuar como funciones puras con respecto a sus props.**
+
+## 6.1 ¿Qué es una función pura?
+
+Una función pura es la que siempre devuelven el mismo resultado para las mismas entradas. Por ejemplo:
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+```
+
+## 6.2 ¿Qué es una función inpura?
+
+Una función Inpura es la que cambia su entrada y así mismo la salida. Por ejemplo:
+
+```js
+function withdraw(account, amount) {
+  account.total -= amount;
+}
+```
+
+Por supuesto, las interfaces de usuario de las aplicaciones son dinámicas y cambian con el tiempo. Más adelante veremos un nuevo concepto de “estado”. El estado le permite a los componentes de React cambiar su salida a lo largo del tiempo en respuesta a acciones del usuario, respuestas de red y cualquier otra cosa, sin violar esta regla.
