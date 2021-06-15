@@ -6,7 +6,7 @@ En esta ocación veremos dos temas:
 
 # 1. Renderizado de elementos en el DOM
 
-Para renderizar un **elemento de React** en un **nodo raíz del DOM**, pasa ambos a **ReactDOM.render()**, para entender lo anetior primero entedamos **¿Qué es un elemento de React.js?** y **¿Qué es un nodo raíz del DOM?**
+Para renderizar un **elemento de React** en un **nodo raíz del DOM**, pasa ambos al interior de **ReactDOM.render()**, para entender lo anterior, primero entendamos **¿Qué es un elemento de React.js?** y **¿Qué es un nodo raíz del DOM?**
 
 ## 1.1. ¿Qué es un elemento de React.js?
 
@@ -17,9 +17,10 @@ En las notas ateriores vimos que un **Elemento de react** describe lo que quiere
 ```js 
 const element = <h1>Hello, world</h1>;
 ```
+
 ## 1.2. ¿Qué es un nodo raíz del DOM?
 
-Para responder esta pregunta recordemos que:
+Para responder esta pregunta comencemos recordando que:
 - El [DOM](https://medium.com/jspoint/understanding-basics-of-dom-265b73d958d1) significa *Document Object Model*.
 - El [DOM](https://levelup.gitconnected.com/what-is-the-dom-6522bf1d312b) es una representación estructurada en forma de árbol **basada en objetos** del documento HTML de origen.
 - El DOM es la primera etapa del [*Critial Rendering Path*](https://dev.to/codesensei/critical-rendering-path-39m).
@@ -64,7 +65,7 @@ function tick() {
 
 setInterval(tick, 1000);
 ```
-Este llama a **ReactDOM.render()** cada segundo desde un callback del **setInterval()**.
+Este función llama a **ReactDOM.render()** cada segundo desde un callback del **setInterval()**.
 React DOM compara el elemento y sus hijos con el elemento anterior, y solo aplica las actualizaciones del DOM que son necesarias para que el DOM esté en el estado deseado.
 
 > En la práctica, la mayoría de las aplicaciones de React solo llaman a ReactDOM.render() una   vez. En las siguientes secciones aprenderemos cómo el código se puede encapsular en componentes con estado.
