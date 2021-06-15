@@ -1,4 +1,5 @@
-En esta ocación veremos:
+# Indice de contenido
+
 1. [¿Qué es JSX?](#jsx1)
 2. [¿Porqué usar JSX?](#jsx2)
 3. [Principales características de JSX](#jsx3)
