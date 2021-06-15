@@ -3,7 +3,7 @@
 
 Esta es la documentación de mi proceso aprendiendo React.js 
 
-## Indice del contenido
+## Indice de los conceptos principales
 
 1. [Presentando JSX](https://github.com/jorgearguellles/aprendiendoReact.js/blob/main/ConceptosPrincipales/presentandoJSX.md)
 2. [Renderizando elementos](https://github.com/jorgearguellles/aprendiendoReact.js/blob/main/ConceptosPrincipales/renderizandoElementos.md)
