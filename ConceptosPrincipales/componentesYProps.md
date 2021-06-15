@@ -34,3 +34,48 @@ class Welcome extends React.Component {
 
 # Renderizando un componente
 
+Un componente puede renderizar etiquetas del DOM. Por ejemplo:
+
+```js
+const element = <div />;
+```
+
+y componentes definidos por el desarrollador. Por ejemplo:
+
+```js
+const element = <Welcome name="Jorge" />;
+```
+
+Cuando React ve un elemento representando un componente definido por el usuario, pasa atributos JSX e hijos a este componente como un solo objeto. Llamamos a este objeto “props”.
+
+Siempre comienza los nombres de componentes definidos con una letra mayúscula.
+React trata los componentes que empiezan con letras minúsculas como etiquetas del DOM. Por ejemplo:
+- <div /> representa una etiqueta div HTML pero
+- <Welcome /> representa un componente y requiere que Welcome esté definido.
+
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Jorge" />;
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+
+<details>
+           <summary>Recapitulemos lo que sucede en este ejemplo:</summary>
+           <ol>
+           <li>Llamamos a ReactDOM.render() con el elemento <Welcome name="Jorge" />.</li>
+           <li>React llama al componente Welcome con {name: 'Sara'} como “props”.</li>
+           <li>Nuestro componente Welcome devuelve un elemento <h1>Hello, Jorge</h1> como resultado.</li>
+           <li>React DOM actualiza eficientemente el DOM para que coincida con <h1>Hello, Jorge</h1> </li>
+           </ol>
+</details>
+
+
+
+
