@@ -1,6 +1,6 @@
 # 1. ¿Qué es un Componente?
 
-Un componente **es una función de JavaScript** que recibe atributos (En React.js se les llamamos *Props*) y devuelve un **elemento de react.js** que describe lo que debe aparecer en la pantalla.
+Un componente **es una función de JavaScript** que recibe atributos, que en React.js se les llamamos *Props* y devuelve un **elemento de react.js** que describe lo que debe aparecer en la pantalla.
 
 > Recordemos: Los **elementos** son los bloques más pequeños de las aplicaciones de React.js Los **elementos** son los que constituyen los **componentes** y los **componentes** constituyen las **interfaces de usuario**.
 
@@ -92,9 +92,9 @@ ReactDOM.render(
 
 # 5. Extracción de componentes
 
-Siempre es buena práctica dividir los componentes en otros más pequeños.
+Extracción de componentes nos invita a siempre dividir los componentes en otros más pequeños. (Buena práctica)
 
-Por ejemplo, considera este componente **Comment** que describe un comentario en una web de redes sociales y acepta las sigueintes props:
+Por ejemplo, considera este componente **Comment** que describe un comentario en una web de redes sociales y acepta las siguientes **Props**:
 - author (un objeto)
 - text (un string)
 - date (una fecha)
@@ -125,7 +125,7 @@ function Comment(props) {
 
 Este componente puede ser difícil de cambiar debido a todo el anidamiento, y también es difícil reutilizar partes individuales de él. Vamos a extraer algunos componentes del mismo.
 
-Primero, vamos a extraer **Avatar** que no necesita saber que está siendo renderizado dentro de un **Comment** porque le dimos a su propiedad un nombre más genérico: user en vez de author.
+1. Primero, vamos a extraer **Avatar** que no necesita saber que está siendo renderizado dentro de un **Comment** porque le dimos a su propiedad un nombre más genérico: user en vez de author.
 
 ```js
 function Avatar(props) {
@@ -137,9 +137,9 @@ function Avatar(props) {
   );
 }
 ```
-> Recomendamos nombrar las props desde el punto de vista del componente, en vez de la del contexto en el que se va a utilizar.
+> Recomendamos nombrar las Props desde el punto de vista del componente, en vez de la del contexto en el que se va a utilizar.
 
-El componenete Comment va quedando así:
+El **componenete Comment** va quedando así:
 
 ```js
 function Comment(props) {
@@ -188,7 +188,7 @@ function UserInfo(props) {
 }
 ```
 
-El componente Commet va quedando así:
+Finalmente el **componente Commet** queda así:
 
 ```js
 function Comment(props) {
@@ -231,6 +231,8 @@ function Avatar(props) {
 # 6. Las Props son de solo lectura
 
 > **Todos los componentes de React deben actuar como funciones puras con respecto a sus props.**
+
+Para entender la idea de que los Props son de solo lectura, es necesario entender qué es una función pura y que es una función Inpura.
 
 ## 6.1 ¿Qué es una función pura?
 
