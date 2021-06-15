@@ -2,11 +2,15 @@
 
 1. [¿Qué es un Componente?](#componente)
     1. [Caracteristicas de un Componente](#caracteristicasCompoennte)
-2. [Tipos de Componentes](# )
-3. []()
-4. []()
-5. []()
-6. []()
+2. [Tipos de Componentes](#tiposDeComponente)
+    1. [Componente Funcional](#componenteFuncional)
+    2. [Componente de Clase](#componenteClase)
+3. [Renderizando un componente](#renderizadoComponentes)
+4. [Composición de componentes](#composicionComponente)
+5. [Extracción de componentes](#extraccionComponente)
+6. [Las Props son de solo lectura](#propsLectura)
+    1. [¿Qué es una función pura?](#funcionPura)
+    2. [¿Qué es una función Inpura?](#funcionInpura)
 
 
 
@@ -86,7 +90,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
-<a name="composiciónComponente"/>
+<a name="composicionComponente"/>
 
 # 4. Composición de componentes
 
@@ -114,7 +118,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
-<a name="extracciónComponente"/>
+<a name="extraccionComponente"/>
 
 # 5. Extracción de componentes
 
@@ -151,7 +155,7 @@ function Comment(props) {
 
 Este componente puede ser difícil de cambiar debido a todo el anidamiento, y también es difícil reutilizar partes individuales de él. Vamos a extraer algunos componentes del mismo.
 
-1. Primero, vamos a extraer **Avatar** que no necesita saber que está siendo renderizado dentro de un **Comment** porque le dimos a su propiedad un nombre más genérico: user en vez de author.
+Primero, vamos a extraer **Avatar** que no necesita saber que está siendo renderizado dentro de un **Comment** porque le dimos a su propiedad un nombre más genérico: user en vez de author.
 
 ```js
 function Avatar(props) {
