@@ -1,15 +1,36 @@
+# Indice de contenido
+
+1. [¿Qué es un Componente?](#componente)
+    1. [Caracteristicas de un Componente](#caracteristicasCompoennte)
+2. [Tipos de Componentes](# )
+3. []()
+4. []()
+5. []()
+6. []()
+
+
+
+<a name="componente"/>
+
 # 1. ¿Qué es un Componente?
 
 Un componente **es una función de JavaScript** que recibe atributos, que en React.js se les llamamos *Props* y devuelve un **elemento de react.js** que describe lo que debe aparecer en la pantalla.
 
 > Recordemos: Los **elementos** son los bloques más pequeños de las aplicaciones de React.js Los **elementos** son los que constituyen los **componentes** y los **componentes** constituyen las **interfaces de usuario**.
 
-## 1.1. ¿Caracteristicas de un Componente?
+<a name="caracteristicasCompoennte"/>
+
+## 1.1. Caracteristicas de un Componente
 - Permiten separar la interfaz de usuario en **piezas independientes**
 - Permiten separar la interfaz de usuario en **piezas reutilizables**
 - Permiten pensar en **cada pieza de forma aislada**.
 
+
+<a name="tiposDeComponente"/>
+
 # 2. Tipos de Componentes
+
+<a name="componenteFuncional"/>
 
 ## 2.1. Componentes funcionales
 
@@ -20,6 +41,7 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
+<a name="componenteClase"/>
 
 ## 2.2. Componentes de clase
 El ejemlo anterior también se puede expresar por medio de una [clase de ES6](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes) para definir un componente:
@@ -31,6 +53,8 @@ class Welcome extends React.Component {
   }
 }
 ```
+
+<a name="renderizadoComponente"/>
 
 # 3. Renderizando un componente
 
@@ -62,6 +86,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+<a name="composiciónComponente"/>
 
 # 4. Composición de componentes
 
@@ -89,6 +114,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+<a name="extracciónComponente"/>
 
 # 5. Extracción de componentes
 
@@ -227,12 +253,15 @@ function Avatar(props) {
   );
 }
 ```
+<a name="propsLectura"/>
 
 # 6. Las Props son de solo lectura
 
 > **Todos los componentes de React deben actuar como funciones puras con respecto a sus props.**
 
 Para entender la idea de que los Props son de solo lectura, es necesario entender qué es una función pura y que es una función Inpura.
+
+<a name="funcionPura"/>
 
 ## 6.1 ¿Qué es una función pura?
 
@@ -243,6 +272,7 @@ function sum(a, b) {
   return a + b;
 }
 ```
+<a name="funcionInpura"/>
 
 ## 6.2 ¿Qué es una función inpura?
 
