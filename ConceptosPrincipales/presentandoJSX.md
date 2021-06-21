@@ -79,6 +79,16 @@ Después de compilarse, las expresiones JSX se convierten en llamadas a funcione
 Por ejemplo: 
 
 ```js
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Jorge',
+  lastName: 'Arias'
+};
+
+
 function getGreeting(user) {
   if (user) {
     return <h1>Hello, {formatName(user)}!</h1>;
