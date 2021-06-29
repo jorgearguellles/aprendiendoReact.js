@@ -7,9 +7,9 @@ El **Critial Rendering Path** es un proceso qué los navegadores hacen para qué
 De todo el proceso critico de renderizado, nos intereza solamente el DOM.
 
 # 1. ¿Qué es el DOM?
-- El DOM significa: Document Object Model - Modelo de objetos de documento
-- El DOM es una representación gráfica de un diagrama de árbol de nodos basado en el documento HTML de nuestra aplicación web.
-- El DOM es un modelo que puede ser modificado
+- El **DOM** significa: Document Object Model - Modelo de objetos de documento
+- El **DOM** es una representación gráfica de un diagrama de árbol de nodos basado en el documento HTML de nuestra aplicación web.
+- El **DOM** es un modelo que puede ser modificado
 
 # 2. ¿Qué es el DOM Virtual?
 
