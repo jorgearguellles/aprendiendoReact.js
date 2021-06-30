@@ -1,0 +1,1 @@
+[300 preguntas de entrevista técnica sobre React.js](https://dev.to/sakhnyuk/300-react-interview-questions-2ko4#what-is-react)

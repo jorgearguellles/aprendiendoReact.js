@@ -11,25 +11,31 @@ De todo el proceso critico de renderizado, nos intereza solamente el DOM.
 - El **DOM** es una representación gráfica de un diagrama de árbol de nodos basado en el documento HTML de nuestra aplicación web.
 - El **DOM** es un modelo que puede ser modificado
 
+
 # 2. ¿Qué es el DOM Virtual?
 
-- El **DOM Virtual** es una copia ligera del **DOM "Real"** 
-- El **DOM Virtual** se guarda en memoria
-- El **DOM Virtual** actua como intermediario entre:
-  - Los estados de la aplicación
-  - Los estados de DOM vistos por el usuario (UI)
+- El **DOM virtual** es una representación en memoria del **DOM real.**
+- La representación de una interfaz de usuario se guarda en la memoria y se sincroniza con el DOM "real". Es un paso que ocurre entre la función de renderizado que se llama y la visualización de elementos en la pantalla. Todo este proceso se llama **reconciliación**.
 
 # 3. ¿Cómo funciona el DOM Virtual?
 
-El **DOM virtual** tiene las mismas propiedades que el **DOM real**, pero carece del poder del objeto real para cambiar directamente lo que está en la pantalla, por eso, cuando ocurre un cambio en la aplicación web, React.js compara el **DOM virtual** con una **instantánea del DOM virtual tomada justo antes de la actualización del DOM virtual**.
+El DOM Virtual funciona en 3 pasos:
 
-Con la ayuda de esta comparación, React descubre qué componentes de la interfaz de usuario deben actualizarse. Este proceso se llama diferenciación. 
+1. Siempre que cambia cualquier dato subyacente, toda la interfaz de usuario se vuelve a representar en la representación del DOM virtual.
 
-> El algoritmo que se utiliza para el proceso de diferenciación se denomina algoritmo de diferenciación.
+<img src="../img/stepOne_VirtualDOM.png"/>
 
-Una vez que React.js sabe qué componentes se han actualizado, reemplaza los nodos DOM originales con el nodo DOM actualizado.
+2. Luego se calcula la diferencia entre la representación DOM anterior y la nueva. (Algoritmo de diferenciación)
 
-> El proceso de mantener la sincronización entre el **DOM** y el **Virtual DOM** se llama ***Reconciliación***
+<img src="../img/stepTwo_VirtualDOM.png"/>
+
+3. Una vez que se realizan los cálculos, el DOM real se actualizará solo con las cosas que realmente han cambiado.
+<img src="../img/stepThree_VirtualDOM.png"/>
+
+# 3. ¿Cual es la diferencia entre el Virtual DOM y el Shadow DOM?
+
+Shadow DOM es una tecnología de navegador diseñada principalmente para determinar el alcance de variables y CSS en componentes web. El DOM virtual es un concepto implementado por bibliotecas en JavaScript además de las API del navegador.
+
 
 # RESUMEN
 - Las manipulaciones frecuentes de DOM son caras.
