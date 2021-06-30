@@ -132,3 +132,31 @@ ReactDOM.render(
 );
 ```
 
+# 3. ¿Cuáles son las diferentes fases del ciclo de vida de los componentes?
+
+El ciclo de vida del componente tiene tres fases distintas del ciclo de vida:
+
+1. **Mounting - Montaje:** el componente está listo para ser montado en el DOM del navegador. Esta fase cubre la inicialización de los métodos de ciclo de vida:
+    - `constructor()`
+    - `getDerivedStateFromProps()`
+    - `render()`
+    - `componentDidMount()`
+
+2. **Updating - Actualización:** en esta fase, el componente se actualiza de dos maneras, enviando las nuevos *props* y actualizando el estado desde el método `setState()` o `forceUpdate()`. Esta fase cubre los métodos del ciclo de vida:
+    - `getDerivedStateFromProps()`
+    - `shouldComponentUpdate()`
+    - `render()`
+    - `getSnapshotBeforeUpdate()`
+    - `componentDidUpdate()`
+
+3. **Unmounting - Desmontaje:** En esta última fase, el componente no es necesario y se desmonta del DOM del navegador. Esta fase incluye el método de ciclo de vida: 
+    - `componentWillUnmount()``
+
+
+Vale la pena mencionar que React internamente tiene un concepto de fases al aplicar cambios al DOM. Están separados de la siguiente manera:
+  - **Render - Renderizar:** El componente se renderizará sin efectos secundarios. Esto se aplica a los **componentes puros** y en esta fase, React puede pausar, cancelar o reiniciar el renderizado. 
+  - **Pre-commit - Compromiso previo:** Antes de que el componente aplique los cambios al DOM, hay un momento que permite a React leer del DOM a través de `getSnapshotBeforeUpdate()`
+  - **Commit - Compromiso:** React funciona con DOM y ejecuta los ciclos de vida finales respectivamente, `componentDidMount()` para el montaje, `componentDidUpdate()` para actualizar y `componentWillUnmount()` para desmontar.
+
+
+# 4. 

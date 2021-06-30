@@ -17,6 +17,10 @@ De todo el proceso critico de renderizado, nos intereza solamente el DOM.
 - El **DOM virtual** es una representación en memoria del **DOM real.**
 - La representación de una interfaz de usuario se guarda en la memoria y se sincroniza con el DOM "real". Es un paso que ocurre entre la función de renderizado que se llama y la visualización de elementos en la pantalla. Todo este proceso se llama **reconciliación**.
 
+## 2.1 ¿Qué es la reconciliación?
+
+Cuando las *Props* o el estado de un componente cambian, React decide si es necesaria una actualización del DOM real comparando el elemento recién devuelto con el renderizado anteriormente. Cuando no son iguales, React actualizará el DOM. Este proceso se llama reconciliación.
+
 # 3. ¿Cómo funciona el DOM Virtual?
 
 El DOM Virtual funciona en 3 pasos:
