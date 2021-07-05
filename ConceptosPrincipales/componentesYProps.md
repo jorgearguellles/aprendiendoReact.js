@@ -20,9 +20,10 @@
 
 Un componente **es una función de JavaScript** que recibe atributos, que en React.js se les llamamos *Props* y devuelve un **elemento de react.js** que describe lo que debe aparecer en la pantalla.
 
-> Recordemos: Los **elementos** son los bloques más pequeños de las aplicaciones de React.js Los **elementos** son los que constituyen los **componentes** y los **componentes** constituyen las **interfaces de usuario**.
+> Recordemos: Los **elementos** son los bloques más pequeños de las aplicaciones de React.js. Los **elementos** forman los **componentes** y los **componentes** forman las **interfaces de usuario**.
+>>**Elemento -> Componente -> UI**
 
-<a name="caracteristicasCompoennte"/>
+<a name="caracteristicasComponente"/>
 
 ## 1.1. Caracteristicas de un Componente
 - Permiten separar la interfaz de usuario en **piezas independientes**
@@ -79,11 +80,16 @@ Cuando React ve un elemento representando un componente definido por el usuario,
 
 
 ```js
-function Welcome(props) { //Aquí defino el componente e indico que recibe props 
-  return <h1>Hello, {props.name}</h1>; //El props se llama name y más adelante le van a indicar
+function Welcome(props /*A*/ ) { 
+  return <h1>Hello, {props.name /*B*/ }</h1>; 
 }
 
-const element = <Welcome name="Jorge" />; //Aquí llamo el componente y le indico el dato que pasra como props, lo guardo en una constante llamada elemento
+//A: Aquí defino el componente e indico que recibe props 
+//B: El props se llama name y más adelante le van a indicar
+
+const element = <Welcome name="Jorge" /*C*/ />; 
+
+//C: Aquí llamo el componente y le indico el dato que pasara como props, lo guardo en una constante llamada elemento
 
 ReactDOM.render(
   element,
