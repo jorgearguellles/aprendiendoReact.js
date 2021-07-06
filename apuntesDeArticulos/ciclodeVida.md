@@ -57,6 +57,7 @@ Esta es la última fase del ciclo de vida del componente. En la etapa de desmont
 
 ## Imagen resumen de los métodos disponibles en cada fase del ciclo de vida de un compoente:
 <img src="../img/componentLifeCicle.png">
+<img src="../img/lifeCicleFlow.png">
 
 [Diagrama de métodos del ciclo de vida en React.js:](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 <img src="../img/reactLifeCicle.png">
